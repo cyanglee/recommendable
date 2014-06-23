@@ -11,7 +11,6 @@ module Recommendable
         Recommendable.query(self.class, ids).sort_by { |user| ids.index(user.id.to_s) }
       end
 
-      private
 
       # Fetch a list of recommendations for a passed class.
       #
@@ -27,6 +26,8 @@ module Recommendable
 
         Recommendable.query(klass, ids).sort_by { |record| ids.index(record.id.to_s) }
       end
+
+      private
 
       # Removes an item from a user's set of recommendations
       # @private
