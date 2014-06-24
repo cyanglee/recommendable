@@ -81,6 +81,9 @@ class User
 end
 ```
 
+*Updated by: cyanglee*<br/>
+For some reason, the **recommended_for** is a private method in the **Recommender** class and it's not used anywhere. I made the change to make it a public method so I can get place recommendations.
+
 To ensure that users' recommendations are processed after they rate items, make sure your bundled queue system is running:
 
 ```bash
